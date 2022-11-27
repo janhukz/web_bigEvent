@@ -5,11 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <title>Big Event Login</title>
 </head>
 
 <body>
+    <div class="layui-main">
+        <img src="./assets/images/logo.png" alt="Big Event">
+    </div>
 
+    <!-- 登录与注册盒子 -->
+    <div class="loginAndReg">
+        <div class="title-box"></div>
+
+        <!-- 默认展示登录盒子 -->
+        <div class="login-box">
+            <!-- 登录表单 -->
+            <form class="layui-form" id="login-form">
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="Username" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="Password" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>Login</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="" id="link_reg">Creat an account</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- 注册盒子默认隐藏 -->
+        <div class="reg-box">
+            <!-- 注册表单 -->
+            <form class="layui-form" id="reg-form">
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="Username" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="Password" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="cfmpassword" required lay-verify="required|pwd|cfmpwd" placeholder="Confirm password" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>Register</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="" id="link_login">Jump to login</a>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/lib/jquery.js"></script>
+    <script src="./assets/js/baseAPI.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
 
 </html>
