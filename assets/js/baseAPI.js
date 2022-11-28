@@ -13,7 +13,7 @@ $.ajaxPrefilter(function(options) {
 
         // 处理没有token越权访问的问题
         // console.log(res)
-        if (res.responseJSON.status === 1) {
+        if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
             // 1.强制清空token
             localStorage.removeItem('token')
 

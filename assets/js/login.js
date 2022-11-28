@@ -52,6 +52,7 @@ $(function() {
     // 登录请求
     $('#login-form').submit(function(e) {
         e.preventDefault()
+
         $.ajax({
             url: '/api/login',
             method: 'POST',
@@ -60,6 +61,7 @@ $(function() {
                 if (res.status !== 0) {
                     return layer.msg(res.message)
                 }
+
                 layer.msg(res.message)
 
                 // 将token存入localStorage中
